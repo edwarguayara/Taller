@@ -1,0 +1,19 @@
+En Informática, Inyección de Dependencias (en inglés Dependency Injection, DI) 
+es un patrón de diseño orientado a objetos, en el que se suministran 
+objetos a una clase en lugar de ser la propia clase quien cree el objeto.
+El término fue acuñado por primera vez por Martin Fowler.
+
+Historia
+
+En los comienzos de la programación, los programas eran lineales y monolíticos.
+El flujo de ejecución era simple y predecible, ejecutándose línea tras línea.
+Aparecieron dos conceptos para estructurar el código: la modularidad y la reutilización 
+de los componentes: se crean bibliotecas de componentes reutilizables. El flujo se complica,
+saltando de componente a componente, y aparece un nuevo problema: la dependencia (acoplamiento)
+entre los componentes.
+
+El problema de la dependencia se empieza a considerar lo suficientemente importante 
+como para definir nuevos conceptos en el diseño :
+Inversión de control (IoC, por sus siglas en inglés)
+Inyección de Dependencias (Dependency Injection, DI) 
+que es una forma de inversión de control.
