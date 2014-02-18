@@ -17,3 +17,34 @@ como para definir nuevos conceptos en el diseño :
 Inversión de control (IoC, por sus siglas en inglés)
 Inyección de Dependencias (Dependency Injection, DI) 
 que es una forma de inversión de control.
+
+Implementación del patrón en Java
+
+La forma habitual de implementar este patrón es mediante un "Contenedor DI" y objetos planos o simples
+por ejemplo los llamados POJO en java. El contenedor inyecta a cada objeto los objetos necesarios según
+las relaciones plasmadas en un fichero de configuración.
+Típicamente este contenedor es implementado por un framework externo a la aplicación 
+(como Spring o uno propietario), por lo cual en la aplicación también se utilizará inversión de control 
+al ser el contenedor (almacenado en una biblioteca) quien invoque el código de la aplicación.
+Ésta es la razón por la que los términos de inversión de control e inyección de dependencias se confunden 
+habitualmente entre sí.
+
+Ilustración de código usando Java
+
+El siguiente ejemplo muestra una implementación sin inyección de dependencias:
+
+public class Vehiculo {
+ 
+    private Motor motor = new Motor();
+ 
+    /** @retorna la velocidad del vehículo*/
+    public Double enAceleracionDePedal(int presionDePedal) {
+        motor.setPresionDePedal(presionDePedal);
+        int torque = motor.getTorque();
+        Double velocidad = ... //realiza el cálculo
+        return velocidad;
+    }
+ 
+}
+ 
+//se omite la clase Motor ya que no es relevante para este ejemplo
